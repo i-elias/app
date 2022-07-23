@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1 id="title">Generate a <br /><span>random password</span></h1>
+        <h2>Never use an insecure password again.</h2>
+      </header>
+
+      <div id="password-container">
+        <h3 class="character-title">
+          Select one or more characters to generate:
+        </h3>
+        <div id="toggle-container">
+          <div class="characters-container">
+            <span>alphabets</span>
+            <div class="switch-grp">
+              <span class="switch-state">off</span>
+              <label class="switch">
+                <input
+                  class="toggle alphabets"
+                  type="checkbox"
+                  value="alphabets"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="characters-container">
+            <span>numbers</span>
+            <div class="switch-grp">
+              <span class="switch-state">off</span>
+              <label class="switch">
+                <input class="toggle numbers" type="checkbox" value="numbers" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="characters-container">
+            <span>symbols</span>
+            <div class="switch-grp">
+              <span class="switch-state">off</span>
+              <label class="switch">
+                <input class="toggle symbols" type="checkbox" value="symbols" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button class="password-generator-btn" type="submit" disabled>
+          Generate passwords
+        </button>
+
+        <div id="input-container">
+          <input
+            id="pass-field-left"
+            class="password-fields"
+            placeholder="15-character password"
+          />
+          <input
+            id="pass-field-right"
+            class="password-fields"
+            placeholder="15-character password"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

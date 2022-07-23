@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: start;
+  background-color: #1c1c1c;
+  font-family: "Inter", sans-serif;
+}
+
+#container {
+  padding: 115px 52px;
+  width: 450px;
+  margin: 200px auto;
+  background-color: #242438;
+}
+
+header {
+  text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+#title {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#title span,
+.password-fields {
+  color: #71f9c8;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+
+header h2,
+.character-title,
+.switch {
+  color: #fff;
+}
+
+#password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-generator-btn {
+  padding: 9px 18px;
+  background-color: #bcc0e3;
+  color: #a39e9e;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 35px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.btn-active {
+  color: #fff;
+  background-color: #2639eb;
+  transition: 1.2s;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid #7e7e7e;
+  padding-top: 30px;
+  column-gap: 40px;
+}
+
+input::placeholder {
+  color: #a5a5a5;
+  font-size: 14px;
+}
+
+.password-fields {
+  width: 211px;
+  min-height: 32px;
+  padding: 4px 15px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  background-color: #31313e;
+}
+.password-fields:focus {
+  outline: 1px solid #a5b1ac;
+}
+
+/***********************
+       TOGGLE ON/OFF
+***********************/
+.character-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+#toggle-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #fff;
+  width: 350px;
+}
+
+.characters-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 19px;
+  /* border: 1px solid red; */
+}
+
+.characters-container-btm {
+  margin-bottom: 38px;
+}
+.switch-grp {
+  display: flex;
+  column-gap: 8px;
+}
+
+.switch-state {
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+label {
+  color: #d5d4d8;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #30303e;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0e6eff;
+}
+
+input:focus + .slider {
+  outline: solid 1px #eef0e8;
+  /* box-shadow: 0 0 1px #0E6EFF; */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
